@@ -14,7 +14,7 @@
 
 <h:body>
 	<div class="div-container">
-		<h:form>
+		<h:form id="formListagem">
 			<p:panel id="container-pai" header="Listagem de Tarefas">
 
 				<div id="div_numero">
@@ -72,7 +72,8 @@
 						<p:column headerText="Ações" style="text-align: center;">
 							<p:commandButton icon="pi pi-pencil" title="Editar"
 								oncomplete="PF('editDialogWidget').show();"
-								action="#{tarefaBean.abrirDialogEditar(tarefa)}" />
+								action="#{tarefaBean.abrirDialogEditar(tarefa)}" 
+								update="formListagem"/>
 							<p:spacer width="10" />
 							<p:commandButton icon="pi pi-trash" title="Excluir"
 								style="background-color: red; color: white;"
