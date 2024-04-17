@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Cadastrar Tarefa</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesCad.css" />
+</h:head>
+
+<h:body>
+	<div class="div-container">
+		<h:form>
+			<p:panel id="container-pai" header="Cadastrar Tarefa">
+
+				<div id="div_titulo">
+					<p:outputLabel for="titulo" value="Título:" />
+					<p:inputText id="titulo" value="#{tarefaBean.titulo}" />
+				</div>
+
+				<div id="div_descricao">
+					<p:outputLabel for="descricao" value="Descrição:" />
+					<p:inputTextarea id="descricao" value="#{tarefaBean.descricao}" />
+				</div>
+
+				<div id="grupo_dropdown">
+					<p:outputLabel for="responsavel" value="Responsável:" />
+					<p:selectOneMenu id="responsavel" value="#{tarefaBean.responsavel}">
+						<f:selectItem itemLabel="Selecione" itemValue="" />
+						<f:selectItems value="#{tarefaBean.responsaveis}"
+							var="responsavelTarefa"
+							itemLabel="#{responsavelTarefa.responsavel}"
+							itemValue="#{responsavelTarefa}" />
+					</p:selectOneMenu>
+
+					<p:outputLabel for="prioridade" value="Prioridade:" />
+					<p:selectOneMenu id="prioridade" value="#{tarefaBean.prioridade}">
+						<f:selectItem itemLabel="Selecione" itemValue="" />
+						<f:selectItems value="#{tarefaBean.prioridades}"
+							var="prioridadeTarefa" itemLabel="#{prioridadeTarefa.prioridade}"
+							itemValue="#{prioridadeTarefa}" />
+					</p:selectOneMenu>
+				</div>
+
+				<div id="div_deadline">
+					<p:outputLabel for="deadline" value="Deadline:" />
+					<p:calendar id="deadline" showOn="button"
+						value="#{tarefaBean.deadline}" pattern="dd/MM/yyyy" />
+				</div>
+
+				<div id="id_botao">
+					<p:commandButton value="Cadastrar"
+						actionListener="#{tarefaBean.cadastrarTarefa}" ajax="false" />
+				</div>
+				<div>
+					<p:messages id="messages" showDetail="true" autoUpdate="true"
+						closable="true" sticky="false" />
+				</div>
+
+			</p:panel>
+		</h:form>
+	</div>
+</h:body>
+
+</html>

@@ -1,0 +1,95 @@
+.div-container {
+	width: 1000px;
+	padding: 20px;
+	margin: 0 auto;
+	margin-top: 150px;
+}
+
+#container-pai {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#div_numero, #div_titu_desc {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#div_titu_desc>.ui-inputfield {
+	flex-grow: 1;
+}
+
+.gp_drop {
+	display: flex;
+}
+
+#drop_responsavel, #drop_situacao {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	margin-right: 1px;
+}
+
+#drop_responsavel>.ui-selectonemenu, #drop_situacao>.ui-selectonemenu {
+	width: 190px;
+}
+
+#div_numero>.ui-outputlabel, #div_titu_desc>.ui-outputlabel,
+	#drop_responsavel>.ui-outputlabel, #drop_situacao>.ui-outputlabel {
+	margin-right: 20px;
+	width: 150px;
+	text-align: right;
+}
+
+#id_botao {
+	margin-left: 70px
+}
+
+
+.scrollable-table {
+  overflow-y: auto;
+}
+
+.scrollable-table .ui-datatable {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.scrollable-table .ui-datatable th,
+.scrollable-table .ui-datatable td {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.scrollable-table .ui-datatable th {
+  background-color: #f0f0f0;
+  height: 10px; /* Ajuste a altura conforme necessário */
+  border-radius: 5px;
+}
+
+.scrollable-table .ui-datatable td {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.botao-editar {
+  background-color: blue;
+  color: white;
+}
+
+.botao-excluir {
+  background-color: red;
+  color: white;
+}
+
+.botao-concluir {
+  background-color: green;
+  color: white;
+}

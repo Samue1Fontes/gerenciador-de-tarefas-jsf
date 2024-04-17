@@ -1,0 +1,52 @@
+.div-container {
+	width: 1000px;
+	padding: 20px;
+	margin: 0 auto; 
+	margin-top: 150px;
+
+}
+
+#container-pai {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+#div_titulo, #div_descricao, #div_deadline {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#grupo_dropdown {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+#grupo_dropdown>.ui-outputlabel {
+	margin-right: 20px;
+}
+
+#grupo_dropdown>.ui-selectonemenu {
+	flex-grow: 1;
+	margin-right: 20px; 
+}
+
+#div_titulo>.ui-outputlabel, #div_descricao>.ui-outputlabel,
+	#div_deadline>.ui-outputlabel {
+	margin-right: 10px;
+	width: 100px; 
+	text-align: right; 
+}
+
+#div_titulo>.ui-inputfield, #div_descricao>.ui-inputfield {
+	flex-grow: 1; 
+}
+
+#id_botao {
+	display: flex;
+	justify-content: center;
+}
